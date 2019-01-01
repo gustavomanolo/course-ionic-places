@@ -1,0 +1,39 @@
+<!--
+  Generated template for the PlaceAddPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar> <ion-title>Agregar lugar</ion-title> </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Direccion</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Categoría</ion-label>
+      <ion-select>
+        <ion-option value="AireLibre">Aire libre</ion-option>
+        <ion-option value="LugarCerrado">Lugar cerrado</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Descripción</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button block>Agrear lugar</button>
+</ion-content>

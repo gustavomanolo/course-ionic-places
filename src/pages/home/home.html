@@ -1,14 +1,50 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <ion-navbar> <ion-title> Ionic Blank </ion-title> </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <!-- <button ion-button color="primary" (click)="goToLugar('Primero')">
+    Navegr a Lugar
+  </button>
+  <button ion-button color="primary" (click)="goToLugar('Segundo')">
+    Navegr a 2o lugar
+  </button>
+
+  <button ion-button color="light">Light</button>
+  <button ion-button>Default</button>
+  <button ion-button color="secondary">Secondary</button>
+  <button ion-button color="danger">Danger</button>
+  <button ion-button color="dark">Dark</button>
+
+  <p text-center>Texto centro</p>
+  <p text-right>Texto right</p>
+  <p text-uppercase>Texto uppercase</p>
+
+  <p text-wrap>Texto wrap fklsdajfldñsk afjdsaf ldskja fldksa fjldsñakf dsajf dlsñkafj ladsñ</p>
+
+  <p>--------------</p>
+  <p padding>Texto con padding</p>
+  <p padding-top>Padding top</p> -->
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let place of places">
+      <ion-item (click)="goToPlace(place)">
+        <h2>{{ place.name }}</h2>
+        <h3>{{ place.address }}</h3>
+        <p>{{ place.category }}</p>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="deletePlace(place)">
+          <ion-icon name="mail"></ion-icon>
+          Eliminar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="goToPlace({})">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>
